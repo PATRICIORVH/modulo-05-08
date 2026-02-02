@@ -87,27 +87,6 @@ Aquí creé 5 tablas para el sistema bancario.
 Las 5 tablas se crearon correctamente. Además de mostrar los resultados de consultas de interés mensual de préstamos.
 
 
-## ¿Qué es la Normalización?
-
-Normalizar es organizar bien la base de datos para que no haya datos repetidos y sea fácil de actualizar.
-
-### 1FN - Primera Forma Normal
-Cada celda tiene solo UN valor. No hay listas ni valores juntos.
-
-Ejemplo malo: `Cursos: MAT101|PHY101`  
-Ejemplo bueno: En una fila MAT101, en otra PHY101
-
-### 2FN - Segunda Forma Normal
-Además de 1FN, si una tabla tiene una clave compuesta, cada dato debe depender de TODA la clave, no de solo una parte.
-
-En el Sistema 2, la tabla `DETALLE_PEDIDO` tiene clave compuesta (id_pedido, id_producto). Los datos de ahí dependen de AMBAS claves.
-
-### 3FN - Tercera Forma Normal
-Además de 2FN, no hay datos que dependan de otros datos que no sean clave.
-
-Ejemplo: En el Sistema 3, la oficina del banco depende del cliente, no de la transacción. Por eso están en tablas separadas.
-
-
 ## SQL usados
 
 - **PRIMARY KEY (PK)**: Identifica cada fila única
